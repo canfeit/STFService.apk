@@ -3,16 +3,17 @@ apply plugin: 'com.google.protobuf'
 
 buildscript {
     repositories {
+        google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.0'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.7'
     }
 }
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.1"
+    buildToolsVersion "28.0.3"
 
     signingConfigs {
         debug {
@@ -24,8 +25,8 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 22
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 7
         versionName "2.4.0"
         applicationId "jp.co.cyberagent.stf"
